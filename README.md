@@ -15,19 +15,19 @@ Os comandos do tipo DDL (Data Definition Language) são utilizados para gerencia
 
 ### Create -criando novos bancos de dados e novas tabelas
 
-O comando abaixo vai criar um banco de dados chamado 'banco'
+* O comando abaixo vai criar um banco de dados chamado 'banco'
 
 ``` 
 create database banco;
 ```
 
-O comando abaixo vai criar um banco de dados chamado 'banco'
+* O comando abaixo vai criar um banco de dados chamado 'banco'
 
 ``` 
 create database banco;
 ```
 
-melhorando o comando ´create database`, setando o utf 8 como codificador de characters especiais:
+* Melhorando o comando ´create database`, setando o utf 8 como codificador de characters especiais:
 
 ``` 
 create database banco
@@ -36,7 +36,7 @@ default collate utf8_general_ci;
 ```
 
 
-O comando abaixo vai criar uma tabelas cursos, caso ela não exista; 
+* O comando abaixo vai criar uma tabelas cursos, caso ela não exista; 
 
 ``` 
 create tables if not exists cursos(
@@ -50,50 +50,50 @@ ano year default '2016'
 
 ### ALTER: alterando uma tabela já criada
 
-O comando abaixo, cria uma nova coluna com o nome profissão:
+* O comando abaixo, cria uma nova coluna com o nome profissão:
 
 ```
 alter table pessoas
 add column profissao varchar(30);
 ```
-O comando abaixo, apaga a coluna com o nome profissão:
+* O comando abaixo, apaga a coluna com o nome profissão:
 
 ```
 alter table pessoas
 drop column profissao;
 ```
 
-O comando abaixo, adiciona a coluna 'profissao' após a coluna 'nome':
+* O comando abaixo, adiciona a coluna 'profissao' após a coluna 'nome':
 ```
 alter table pessoas
 add column profissao varchar(10) after nome;
 ```
 
-Adicionar a coluna código como a primeira coluna:
+* Adicionar a coluna código como a primeira coluna:
 ```
 alter table pessoas
 add column codigo int first;
 ```
 
-o comando abaixo modifica as constraints e os tipos primitivos, porém não pode renomear a coluna:
+* o comando abaixo modifica as constraints e os tipos primitivos, porém não pode renomear a coluna:
 ```
 alter table pessoas
 modify column profissao varchar (20) not null;
 ```
 
-o comando abaixo modifica o nome da coluna,  as constraints e os tipos primitivos, porém você precisa colocar o nome anterior da coluna e o atual:
+* o comando abaixo modifica o nome da coluna,  as constraints e os tipos primitivos, porém você precisa colocar o nome anterior da coluna e o atual:
 ```
 alter table pessoas
 change column profissao prof varchar (20);
 ```
 
-o comando abaixo modifica o nome da tabela 'pessoas' para 'gafanhotos':
+* o comando abaixo modifica o nome da tabela 'pessoas' para 'gafanhotos':
 ```
 alter table pessoas
 rename to gafanhotos;
 ```
 
-e se depois eu quiser inserir uma coluna para a minha primary key? é simple:
+* e se depois eu quiser inserir uma coluna para a minha primary key? é simples:
 
 ```
 alter table pessoas
@@ -106,21 +106,16 @@ add primary key (idcurso);
 
 ### DROP: excluindo uma tabela do banco de dados
 
-O comando abaixo exclue a base de dados 'banco':
+* O comando abaixo exclue a base de dados 'banco':
 
 ```
 drop database banco;
 ```
 
-O comando abaixo exclue a tabela 'cursos':
+* O comando abaixo exclue a tabela 'cursos':
 
 ```
 drop table cursos;
-```
-
-```
-alter table pessoas
-add primary key (idcurso);
 ```
 
 
