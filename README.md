@@ -136,7 +136,7 @@ values
 ('Gordofredo','1984-01-03','M','78.5','1.83','Brasil');
 ```
 
-Caso você estiver inserindo dados, e os dados estiverem na ordem das colunas das tabelas, você pode omitir os nomes das colunas, ex:
+* Caso você estiver inserindo dados, e os dados estiverem na ordem das colunas das tabelas, você pode omitir os nomes das colunas, ex:
 
 
 ``` 
@@ -144,7 +144,7 @@ insert into pessoas values
 ('Gordofredo','1984-01-03','M','78.5','1.83','Brasil');
 ```
 
-Também pode inserir várias pessoas em um único comando:
+* Também pode inserir várias pessoas em um único comando:
 
 ``` 
 insert into pessoas values
@@ -154,7 +154,7 @@ insert into pessoas values
 
 ### UPDATE: atualizando os registros já inseridos
 
-O exemplo abaixo estará atualizando a tabela cursos, alterando o campo 'nome' para HTML5 onde o campo 'idcurso' for igual a 1
+* O exemplo abaixo estará atualizando a tabela cursos, alterando o campo 'nome' para HTML5 onde o campo 'idcurso' for igual a 1
 
 
 ``` 
@@ -167,7 +167,7 @@ Caso dê problema de segurança, você pode utilizar o comando
 `set sql_safe_updates=0;` => antes do comando update
 `set sql_safe_updates=1;` => Depois do comando update
 
-Para limitar a quantidade de linhas que você quer afetar use o `limit`:
+* Para limitar a quantidade de linhas que você quer afetar use o `limit`:
 
 ``` 
 update cursos
@@ -178,7 +178,7 @@ limit 1;
 
 ### DELETE: excluindo registros de uma tabela
 
-O exemplo abaixo estará deletando da tabela cursos, o registro que possui o idcurso = 8:
+* O exemplo abaixo estará deletando da tabela cursos, o registro que possui o idcurso = 8:
 
 ``` 
 delete from cursos
@@ -188,7 +188,7 @@ limit 1;
 
 ### Truncate: excluindo todas linhas de uma tabela
 
-O exemplo abaixo irá apagar todos as linhas da tabela cursos:
+* O exemplo abaixo irá apagar todos as linhas da tabela cursos:
 
 ``` 
 truncate table cursos;
@@ -198,28 +198,28 @@ truncate table cursos;
 
 O SELECT é um dos comandos SQL mais importantes, pois com ele podemos elaborar diversas consultas aos registros da nossa base de dados.
 
-o comando abaixo retornará tudo da tabela cursos:
+* o comando abaixo retornará tudo da tabela cursos:
 
 ``` 
 select * from cursos;
 ```
 
-o comando abaixo retornará tudo da tabela cursos:
+* o comando abaixo retornará tudo da tabela cursos:
 
 ``` 
 select * from cursos;
 ```
 
-Para fazer buscas mais específicas:
+* Para fazer buscas mais específicas:
 ``` 
 select nome, carga from cursos;
 ``` 
-Seleciona o nome dos estudantes  que forem do curso de Desenvolvimento de software:
+* Seleciona o nome dos estudantes  que forem do curso de Desenvolvimento de software:
 ```
 SELECT nome FROM estudantes WHERE curso = 'Desenvolvimento de Software';
 ```
 
-O comando abaixo fará com que os nomes sejam exibidos de forma ascendentes:
+* O comando abaixo fará com que os nomes sejam exibidos de forma ascendentes:
 ```
 SELECT nome FROM estudantes ORDER BY nome;
 ```
